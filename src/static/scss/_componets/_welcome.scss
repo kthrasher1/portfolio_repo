@@ -1,0 +1,154 @@
+.welcome{
+    div {
+        margin-top: 100px;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: auto;
+        animation-name: slide-up-fade-in ;
+        animation-duration: 0.7s;
+    }
+
+    @keyframes slide-up-fade-in {
+        0% {
+            transform: translateY(3.5vh);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    h1{
+        font-size: 3.5em;
+        margin-right: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        margin-top: 3px;
+        font-size: 17.5px;
+    }
+
+
+    .btn {
+        display: block;
+        text-align: center;
+        width: 150px;
+        font-weight: 600;
+        margin-top: 35px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        padding: 1rem 1.50rem;
+        cursor: pointer;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        &:hover {
+            background-color: rgba($color: black, $alpha: 0.9);
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .darkmode--btn {
+            color: black;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+
+
+@media screen and (min-width: $bp-small) {
+    .welcome {
+
+        div {
+            margin-top: 150px;
+            margin-left: 15%;
+            margin-right: 15%;
+            height: calc(100vh - 30em);
+            width: auto;
+        }
+
+        h1 {
+            font-size: 8em;
+            margin-right: 40px;
+
+        }
+
+
+        h2 {
+            font-size: 50px;
+        }
+
+        p {
+            width: 750px;
+            font-size: 25px;
+        }
+
+
+
+        .btn {
+            margin-top: 50px;
+            padding: 1.25rem 1.75rem;
+        }
+    }
+}
+
+@media screen and (min-width : $bp-xlarge) {
+    .welcome div {
+        margin-top: 100px;
+        margin-left: 15%;
+        margin-right: 15%;
+        height: calc(100vh - 25em);
+        width: auto;
+
+        h1 {
+            font-size: 9em;
+        }
+
+        h2 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            margin-top: 75px;
+        }
+    }
+}
+
+@media screen and (min-width : $bp-xxlarge) {
+    .welcome div {
+        margin-top: 200px;
+        margin-left: 15%;
+        margin-right: 15%;
+
+        h1 {
+            font-size: 11em;
+        }
+
+        h2 {
+            font-size: 5em;
+        }
+
+        p {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            width: 200px;
+            margin-top: 75px;
+        }
+    }
+}
+
+

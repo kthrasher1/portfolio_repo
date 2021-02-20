@@ -1,0 +1,70 @@
+.about-me {
+    margin-top: 0;
+    margin-bottom: 100px;
+    height: auto;
+
+    div {
+        position: relative;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    h3 {
+        font-size: 35px;
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-size: 17.5px;
+        margin-bottom: 2em;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(140px, 250px));
+        font-size: 17.5px;
+
+        li {
+            margin: 10px 10px 10px 30px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .about-me {
+        margin-top: 150px;
+        margin-bottom: 230px;
+
+        div {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        h3 {
+            font-size: 50px;
+        }
+
+        p{
+            font-size: 25px;
+        }
+
+        ul{
+            font-size: 25px;
+        }
+
+
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+    .about-me {
+        margin-top: 0;
+
+        div {
+
+            width: 50%;
+        }
+    }
+}

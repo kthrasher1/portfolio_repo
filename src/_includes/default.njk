@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{ title }}
+    </title>
+    {% block head %}{% endblock %}
+    <script src="https://kit.fontawesome.com/16b588ee5b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/default.css"/>
+</head>
+<body>
+<header>
+    {% include "partials/navbar.njk" %}
+</header>
+{{ content | safe }}
+
+{% include "partials/footer.njk" %}
+
+<div id="darkmode-btn">
+    <img src="static/img/half-moon.svg" class="moon light btn-dark-mode hidden-desk" id="js-dark-mode-image"
+         onclick="darkmode();" alt="">
+</div>
+
+<script src="/static/js/script.js"></script>
+
+{% if path == "home" %}
+    <!-- Netlify Identity Widget -->
+    <!-- Needed only if you are using Netlify Identity feature -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endif %}
+
+</body>
+</html>

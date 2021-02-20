@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/src/posts/my-first-post.md" />
+    <file url="file://$PROJECT_DIR$/src/posts/my-third-big-post.md" />
+    <file url="file://$PROJECT_DIR$/src/posts/posts.json" />
+    <file url="file://$PROJECT_DIR$/src/posts/second-post.md" />
+    <file url="file://$PROJECT_DIR$/src/posts/this-is-latest-post.md" />
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<nav class="navbar">
+
+   <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fa fa-bars"></i>
+   </span>
+
+    <img src="static/img/Logo-Dark.embed.svg" class="logo hidden" id="dark" alt="">
+    <img src="static/img/Logo-Light.embed.svg" class="logo" id="light" alt="">
+
+    {% if navigation.items %}
+
+    <ul class="main-nav" id="js-menu">
+        {% for item in navigation.items %}
+
+            <li>
+                <a class="nav-links" href="{{ item.url }}">{{ item.text }}</a>
+            </li>
+
+        {% endfor %}
+
+        <li>
+            <img src="static/img/half-moon.svg" class="moon light hidden-mob" id="js-dark-mode"
+                 onclick="darkmode();" alt="">
+        </li>
+    </ul>
+
+    {% endif %}
+</nav>

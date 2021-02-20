@@ -1,0 +1,67 @@
+.work {
+    margin-bottom: 100px;
+    height: auto;
+
+    .work-para {
+        position: relative;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    h3 {
+        font-size: 35px;
+        margin-bottom: 1em;
+    }
+
+    h4{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 17.5px;
+        margin-bottom: 2em;
+    }
+
+    .date {
+        font-size: 15px;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .work {
+        margin-bottom: 235px;
+
+        .work-para {
+            margin-left: 15%;
+            margin-right: 15%;
+            width: 50%;
+
+
+            h3 {
+                font-size: 50px;
+            }
+
+            h4 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+
+            .date {
+                font-size: 15px;
+            }
+
+            .work-para-one,
+            .work-para-two,
+            .work-para-three {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+        }
+
+    }
+}

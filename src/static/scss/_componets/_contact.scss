@@ -1,0 +1,108 @@
+.contact-me {
+    height: 300px;
+    margin-bottom: 100px;
+
+    .contact-container {
+        position: relative;
+        margin-left: 10%;
+        margin-right: 10%;
+
+        h3 {
+            margin-bottom: 0.5em;
+            font-size: 35px;
+        }
+
+        p{
+            font-size: 17.5px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            width: 150px;
+            font-weight: 600;
+            margin-top: 35px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            padding: 1rem 1.50rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            &:hover {
+                background-color: rgba($color: black, $alpha: 0.9);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .darkmode--btn {
+                color: black;
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+
+    .socials {
+        font-size: 17.5px;
+        margin-top: 40px;
+        display: inline-flex;
+
+        div{
+            margin-right: 10px;
+        }
+
+        i {
+            margin-right: 10px;
+
+            &:hover{
+                color: rgba($color: black, $alpha: 0.7);
+            }  
+            
+            
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .contact-me {
+        height: 400px;
+        margin-bottom: 100px;
+
+        .contact-container {
+            margin-left: 15%;
+            margin-right: 15%;
+            width: 50%;
+
+            h3 {
+                margin-bottom: 0.5em;
+                font-size: 45px;
+            }
+
+            p{
+                font-size: 25px !important;
+            }
+
+
+            .contact-content {
+                margin-right: 10%;
+            }
+
+            .btn {
+                margin-top: 50px;
+                padding: 1.25rem 1.75rem;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+                &:hover {
+                    background-color: rgba($color: black, $alpha: 0.9);
+                }
+            }
+
+            .socials {
+                font-size: 25px;
+            }
+        }
+    }
+}

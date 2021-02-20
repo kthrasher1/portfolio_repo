@@ -1,6 +1,8 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const striptags = require("striptags");
+const dateTime = require("luxon");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -9,12 +11,24 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
+
+  // eleventyConfig.addFilter('formatDate', (dateObj, fmt = 'MMMM yyyy') =>{
+  //   return DateTime.fromJSDate(dateObj).toFormat(fmt)
+  // })
+
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
+
+    if(dateObj === "present"){
+      return "Present"
+    }
+
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "dd LLL yyyy"
+      "MMMM yyyy"
     );
   });
+
+  eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -26,20 +40,17 @@ module.exports = function (eleventyConfig) {
   );
 
   // Add Tailwind Output CSS as Watch Target
-  eleventyConfig.addWatchTarget("./_tmp/static/css/style.css");
+  eleventyConfig.addWatchTarget("./_tmp/static/scss/");
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
-    "./_tmp/static/css/style.css": "./static/css/style.css",
     "./src/admin/config.yml": "./admin/config.yml",
-    "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
-    "./node_modules/prismjs/themes/prism-tomorrow.css":
-      "./static/css/prism-tomorrow.css",
   });
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
-
+  eleventyConfig.addPassthroughCopy("./src/static/files");
+  eleventyConfig.addPassthroughCopy("./src/static/js");
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
@@ -49,3 +60,21 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
   };
 };
+
+function extractExcerpt(article) {
+  if (!article.hasOwnProperty("templateContent")) {
+    console.warn(
+        'Failed to extract excerpt: Document has no property "templateContent".'
+    );
+    return null;
+  }
+
+  let excerpt = null;
+  const content = article.templateContent;
+
+  excerpt = striptags(content)
+      .substring(0, 1000) // Cap at 200 characters
+      .replace(/^\\s+|\\s+$|\\s+(?=\\s)/g, "")
+      .trim();
+  return excerpt;
+}

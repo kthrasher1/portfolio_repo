@@ -1,0 +1,12 @@
+---
+tags: project
+title: Location Station
+language: HTML SCSS JavaScript PHP MSSQL
+icon: fa fa-address-card icon
+link_icon: fab fa-github secondary-icon
+link: #
+display_link: hidden
+---
+
+In the second year of my degree, the coursework for Web Technologies was a PHP application,
+this was designed to track and store user’s location for attendance.
