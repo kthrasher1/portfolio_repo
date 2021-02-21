@@ -49,7 +49,6 @@ path: home
 
         <h3>What have I been up to? </h3>
         {% for work in collections.work %}
-
         <div class="work-para-one">
             <h4>{{ work.data.title }} - {{ work.data.company }}</h4>
             <p class="date">{{ work.data.published | readableDate }} - {{ work.data.updated | readableDate }}</p>
