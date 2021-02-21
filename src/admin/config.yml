@@ -14,7 +14,7 @@ local_backend: true
 collections:
   - label: "Work"
     name: "work"
-    folder: "src/posts/work"
+    folder: "src/posts"
     create: true
     editor:
       preview: true
