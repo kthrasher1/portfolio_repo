@@ -2,7 +2,7 @@
 title: Computer Vision
 company: "-"
 language: Matlab
-icon: fas fa-eye
+icon: fas fa-eye icon
 link_icon: fab fa-github
 link: https://github.com/kthrasher1/Matlab_CV
 display_link: visible
