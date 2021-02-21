@@ -2,10 +2,11 @@
   "scripts": {
     "watch:sass": "sass --watch src/static/scss:_site/static/css",
     "build:sass": "sass src/static/scss/scss:public/css",
+    "sass": "sass src/static/scss/default.scss _site/static/css/default.css",
     "eleventy": "eleventy --serve",
     "start": "npm-run-all --parallel watch:* eleventy",
     "debug": "set DEBUG=* & eleventy",
-    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production @build:sass"
+    "build": "npm run sass && eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
@@ -18,7 +19,7 @@
     "postcss-cli": "^7.1.1"
   },
   "name": "portfolio_repo",
-  "description": "Starter Template for **N**etlify CMS, **E**leventy, **A**lphine JS & **T**ailwind CSS",
+  "description": "",
   "version": "1.0.0",
   "main": ".eleventy.js",
   "dependencies": {

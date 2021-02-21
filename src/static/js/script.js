@@ -1,54 +1,66 @@
-let mainNav = document.getElementById("js-menu");
-let navBarToggle = document.getElementById("js-navbar-toggle");
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
 
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: light)');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-navBarToggle.addEventListener("click", function () {
-    mainNav.classList.toggle("active");
+navBarToggle.addEventListener('click', function () {
+    mainNav.classList.toggle('active');
 });
+
 let imageTracker = 'moon';
 
 function darkmode() {
 
-    document.querySelector("body").classList.toggle("darkmode--on");
-    document.querySelector("a").classList.toggle("darkmode--nav");
-    document.getElementById("footer").classList.toggle("darkmode--footer");
-
+    let project = document.getElementsByClassName('project-info');
     let btns = document.getElementsByClassName('btn');
 
-    for (let i = 0; i < btns.length; i++) {
-        btns[i].classList.toggle("darkmode--btn");
-
-        let styleElem = document.head.appendChild(document.createElement("style"));
-        styleElem.innerHTML = ".btn:hover {background: #F1F1F1 !important;}";
-    }
-
-    let project = document.getElementsByClassName('project-info');
-    for (let i = 0; i < project.length; i++) {
-        project[i].classList.toggle("darkmode--project");
-    }
-
-    let image = document.getElementById('js-dark-mode');
-    let image_two = document.getElementById('js-dark-mode-image');
     let light = document.getElementById('light');
     let dark = document.getElementById('dark');
+
+    let darkModeIcon = document.getElementById('dark-mode-icon');
+    let darkModeNav =  document.getElementsByClassName('nav-links');
+    let darkModeSocialIcons =  document.getElementsByClassName('social');
+
+    if(prefersDarkScheme.matches){
+        document.body.classList.toggle('light-theme');
+    } else {
+        document.body.classList.toggle('dark-theme');
+        document.querySelector('i').classList.toggle('dark-theme');
+        document.getElementById("footer").classList.toggle("darkmode--footer");
+
+        for (let i = 0; i < project.length; i++) {
+            project[i].classList.toggle("darkmode--project");
+        }
+
+        for(let i = 0; i < darkModeNav.length; i++){
+            darkModeNav[i].classList.toggle('darkmode--nav');
+        }
+
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].classList.toggle("darkmode--btn");
+
+        }
+
+        for (let i = 0; i < darkModeSocialIcons.length; i++) {
+            darkModeSocialIcons[i].classList.toggle("darkmode--social");
+        }
+    }
 
     if (imageTracker === 'moon') {
         light.classList.add("hidden");
         dark.classList.remove("hidden");
-        image.src = 'static/img/sun.svg';
-        image_two.src = 'static/img/sun.svg';
+
+        darkModeIcon.classList.add('fa-sun');
 
         imageTracker = 'sun';
     } else {
         dark.classList.add("hidden");
         light.classList.remove("hidden");
-        image.src = 'static/img/half-moon.svg';
-        image_two.src = 'static/img/half-moon.svg';
+
+        darkModeIcon.classList.remove('fa-sun');
 
         imageTracker = 'moon';
     }
-
 }
 
 if (prefersDarkScheme.matches) {

@@ -17,30 +17,18 @@
             .project-info {
                 background: black;
                 color: white;
-                display: inline-block;
                 width: 300px;
                 height: 400px;
-                display: grid;
                 font-size: 17.5px;
                 position: relative;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1.5fr 0.5fr;
-                grid-template-areas: "header""footer";
                 margin-bottom: 20px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
             }
 
-            a {
-                text-decoration: underline;
-                font-family: $secondary-font;
-            }
-
-            .project-footer {
-                p {
-                    font-size: 15px;
-                }
-
+            .darkmode--project {
+                color: black;
+                background-color: white;
             }
 
             @media (prefers-color-scheme: dark) {
@@ -50,115 +38,19 @@
                 }
             }
 
-            .project-one {
-                grid-area: 1 / 1 / 2 / 2;
-
-                .project-header {
-                    grid-area: header;
-                }
-
-                .project-footer {
-                    position: absolute;
-                    bottom: 0;
-                    grid-area: footer;
-                }
+            a {
+                text-decoration: underline;
+                font-family: $secondary-font;
             }
 
-            .project-two {
-                grid-area: 1 / 2 / 2 / 3;
-
-                .project-header {
-                    grid-area: header;
-                }
-
-                .project-footer {
-                    position: absolute;
-                    bottom: 0;
-                    grid-area: footer;
-                }
+            .project-header{
+                height: 90%;
             }
 
-            .project-three {
-                grid-area: 1 / 3 / 2 / 4;
-
-                .project-header {
-                    grid-area: header;
-                }
-
-                .project-footer {
-                    position: absolute;
-                    bottom: 0;
-                    grid-area: footer;
-                }
-            }
-
-            .project-four {
-                grid-area: 1 / 4 / 2 / 5;
-
-                .project-header {
-                    grid-area: header;
-                }
-
-                .project-footer {
-                    position: absolute;
-                    bottom: 0;
-                    grid-area: footer;
-                }
-            }
-
-            .project-five {
-                grid-area: 2 / 1 / 3 / 2;
-
-                .project-header {
-                    grid-area: header;
-                }
-
-                .project-footer {
-                    position: absolute;
-                    bottom: 0;
-                    grid-area: footer;
-                }
-            }
-
-            .project-six {
-                grid-area: 2 / 2 / 3 / 3;
-
-                .project-header {
-                    grid-area: 1 / 1 / 2 / 2;
-                }
-
-                .project-footer {
-                    position: absolute;
-                    bottom: 0;
-                    grid-area: 2 / 1 / 3 / 2;
-                }
-            }
-
-            .project-seven {
-                grid-area: 2 / 3 / 3 / 4;
-
-                .project-header {
-                    grid-area: 1 / 1 / 2 / 2;
-                }
-
-                .project-footer {
-                    position: absolute;
-                    bottom: 0;
-                    grid-area: 2 / 1 / 3 / 2;
-                }
-            }
-
-            .project-eight {
-                grid-area: 2 / 4 / 3 / 5;
-
-                .project-header {
-                    grid-area: 1 / 1 / 2 / 2;
-                }
-
-                .project-footer {
-                    position: absolute;
-                    bottom: 0;
-                    grid-area: 2 / 1 / 3 / 2;
+            .project-footer {
+                height: 10%;
+                p {
+                    font-size: 15px;
                 }
             }
 
@@ -175,7 +67,7 @@
             }
 
             .icons {
-                margin: 0px 10px 10px 10px;
+                margin: 5px 10px 10px 10px;
                 float: right;
                 display: block;
                 font-size: 25px;
@@ -186,10 +78,7 @@
                 margin: 50px 10px 0px 10px;
                 font-size: 25px;
             }
-
-
         }
-
     }
 }
 

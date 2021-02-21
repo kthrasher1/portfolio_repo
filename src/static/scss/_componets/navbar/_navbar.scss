@@ -44,6 +44,11 @@ a {
 
 }
 
+.logo:hover,
+.nav-links:hover {
+    color: #333;
+}
+
 .navbar-toggle {
     position: absolute;
     display: block;
@@ -58,14 +63,6 @@ a {
 .active {
     display: block;
 }
-
-
-@media (prefers-color-scheme: dark) {
-    .darkmode--nav {
-        color: #FFF;
-    }
-}
-
 
 @media screen and (min-width: 768px) {
     .navbar {
@@ -108,10 +105,5 @@ a {
 
     .navbar-toggle {
         display: none;
-    }
-
-    .logo:hover,
-    .nav-links:hover {
-        color: #333;
     }
 }

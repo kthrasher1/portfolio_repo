@@ -3,37 +3,30 @@ body {
     color: black;
     margin: 0;
     transition: 0.3s ease;
-
 }
 
-@media (prefers-color-scheme: dark) {
-    .darkmode--on {
-        color: #FFF;
-        background: #000;
-    }
 
-    .darkmode--footer {
-        background-color: white;
-        color: black;
-    }
 
-    .btn-dark-mode  {
-        background-color: transparent;
-        color: black;
-        width: 75px;
-        height: 75px;
-        padding: 20px 20px;
-        border-radius: 100%;
-        text-align: center;
-        border: none;
-    }
 
-    #darkmode-btn {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
+.btn {
+    display: block;
+    text-align: center;
+    width: 150px;
+    font-weight: 600;
+    margin-top: 35px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 1rem 1.50rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &:hover {
+        background-color: rgba($color: black, $alpha: 0.9);
     }
 }
+
+
 
 section {
     position: relative;

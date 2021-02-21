@@ -1,13 +1,10 @@
 @import "_defaults/normalize";
 @import "_defaults/variables";
-
 @import "_defaults/typography";
+@import "_defaults/base";
+@import "_defaults/darkmode";
 
 @import "_componets/navbar/navbar";
-
-@import "_defaults/base";
-
-
 @import "_componets/welcome";
 @import "_componets/about";
 @import "_componets/work";

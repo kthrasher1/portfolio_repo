@@ -16,31 +16,6 @@
             font-size: 17.5px;
         }
 
-        .btn {
-            display: block;
-            text-align: center;
-            width: 150px;
-            font-weight: 600;
-            margin-top: 35px;
-            border-radius: 5px;
-            background-color: black;
-            color: white;
-            padding: 1rem 1.50rem;
-            cursor: pointer;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-            &:hover {
-                background-color: rgba($color: black, $alpha: 0.9);
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .darkmode--btn {
-                color: black;
-                background-color: white;
-                box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.1);
-            }
-        }
     }
 
     .socials {
@@ -57,9 +32,7 @@
 
             &:hover{
                 color: rgba($color: black, $alpha: 0.7);
-            }  
-            
-            
+            }
         }
     }
 }
@@ -94,10 +67,6 @@
                 margin-top: 50px;
                 padding: 1.25rem 1.75rem;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-                &:hover {
-                    background-color: rgba($color: black, $alpha: 0.9);
-                }
             }
 
             .socials {
