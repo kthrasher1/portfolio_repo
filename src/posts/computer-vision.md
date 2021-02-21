@@ -10,4 +10,4 @@ published: 2021-02-21T12:24:50.381Z
 updated: 2021-02-21T12:24:50.389Z
 tags: project
 ---
-Using MatLab, this task was to correctly identify starfish on a range of backgrounds, this required to use image manipulation to achieve this.
+Using MatLab, this task was to correctly identify starfish on a range of backgrounds, this required the use of image manipulation to achieve this.
