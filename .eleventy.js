@@ -51,6 +51,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/static/img");
   eleventyConfig.addPassthroughCopy("./src/static/files");
   eleventyConfig.addPassthroughCopy("./src/static/js");
+  eleventyConfig.addPassthroughCopy("./src/static/favicon");
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
