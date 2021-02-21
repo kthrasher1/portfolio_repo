@@ -20,16 +20,21 @@ collections:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Company", name: "company", widget: "string" }
+      - { label: "Language", name: "language", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "string" }
+      - { label: "Link Icon", name: "link_icon", widget: "string" }
+      - { label: "Url", name: "url", widget: "string" }
+      - { label: "Display Link", name: "display_link", widget: "string" }
+      - { label: "Published", name: "published", widget: "datetime" }
+      - { label: "Updated", name: "updated", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
         label: "tags"
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["work", "project"]
   - label: "Settings"
     name: "settings"
     editor:
