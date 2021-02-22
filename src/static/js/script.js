@@ -63,6 +63,6 @@ function darkmode() {
     }
 }
 
-if (prefersDarkScheme.matches) {
-    darkmode()
-}
+// if (prefersDarkScheme.matches) {
+//     darkmode()
+// }
