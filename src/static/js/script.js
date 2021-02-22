@@ -21,9 +21,9 @@ function darkmode() {
     let darkModeNav =  document.getElementsByClassName('nav-links');
     let darkModeSocialIcons =  document.getElementsByClassName('social');
 
-    if(prefersDarkScheme.matches){
-        document.body.classList.toggle('light-theme');
-    } else {
+//     if(prefersDarkScheme.matches){
+//         document.body.classList.toggle('light-theme');
+//     } else {
         document.body.classList.toggle('dark-theme');
         document.querySelector('i').classList.toggle('dark-theme');
         document.getElementById("footer").classList.toggle("darkmode--footer");
@@ -44,7 +44,7 @@ function darkmode() {
         for (let i = 0; i < darkModeSocialIcons.length; i++) {
             darkModeSocialIcons[i].classList.toggle("darkmode--social");
         }
-    }
+//     }
 
     if (imageTracker === 'moon') {
         light.classList.add("hidden");
