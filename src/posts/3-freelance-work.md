@@ -3,7 +3,7 @@ tags: work
 title: Web Developer
 company: Freelance
 published: 2019-10-01
-updated: present
+updated: 2020-09-28
 ---
 
 Supported my studies with freelance development work for Strawberry,a northern Shopify Plus agency. 
