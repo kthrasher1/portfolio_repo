@@ -1,5 +1,5 @@
 ---
-title: Junior Web Developer
+title: Web Developer
 company: Wren Kitchens
 language: "-"
 icon: "-"
