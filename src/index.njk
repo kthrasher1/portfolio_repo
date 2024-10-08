@@ -4,50 +4,42 @@ path: home
 ---
 <section class="welcome">
     <div>
-        <h2>Hello,</h2>
+        <h2>Hey!</h2>
         <h1>I'm <span class="name underline" id="name"> Kurtis. </span></h1>
-        <p>A graduate computer scientist with a keen interest
-            in web technologies.</p>
+        <p>A keyboard nerd with a keen interest in web technologies.</p>
 
-        <a class="btn" id="btn" href="mailto:hello@kurtisthrasher.co.uk">Lets talk.</a>
+        <a class="btn" id="btn" href="mailto:hello@kurtisthrasher.co.uk">Lets talk!</a>
     </div>
 </section>
 
 <section class="about-me" id="about">
     <div>
         <h3>About me</h3>
-
-        <p class="paragraph-one">
-            Hey there! I'm Kurtis, a computer science graduate fresh out of The University Of Hull.
-
-            Currently living in Hull (you can often find me in the Makerspace). I develop
-            amazing websites and cutting-edge web applications... I'm also a massive keyboard nerd.
-
-        </p>
-
-        <p class="paragraph-two">While at university, I interned at a Shopify Plus agency, Strawberry. While there I
-            worked with countless high-end clientele such as BarryM Cosmetics, Lil Packaging and Rio Health.</p>
-
-        <p class="paragraph-three">The current stack I'm using:</p>
-
-        <ul>
-            <li>PHP</li>
-            <li>HTML</li>
-            <li>(S)CSS</li>
-            <li>JavaScript</li>
-            <li>Laravel</li>
-            <li>Vue.js</li>
-        </ul>
-
+        {% if introduction.paragraphs %}
+            {% for paragraph in introduction.paragraphs %}
+                <p class="paragraph-{{ paragraph.display_order }}">
+                    {{ paragraph.text }}
+                </p>
+            {% endfor %}
+        {% endif %}
+        {% if stack.languages %}
+            <p>The current stack I'm using:</p>
+            <ul>
+                {% for language in stack.languages %}
+                    <li>
+                        {{ language.text }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div>
-
 </section>
 
 <section class="work" id="work">
 
     <div class="work-para">
-
         <h3>What have I been up to? </h3>
+
         {% for work in collections.work | reverse %}
         <div class="work-para-one">
             <h4>{{ work.data.title }} - {{ work.data.company }}</h4>
