@@ -2,7 +2,6 @@ const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const striptags = require("striptags");
-const dateTime = require("luxon");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -11,21 +10,22 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
-
-  // eleventyConfig.addFilter('formatDate', (dateObj, fmt = 'MMMM yyyy') =>{
-  //   return DateTime.fromJSDate(dateObj).toFormat(fmt)
-  // })
-
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
 
-    if(dateObj === "present"){
+    if(dateObj === "null"){
       return "Present"
     }
 
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "MMMM yyyy"
     );
+  });
+
+  eleventyConfig.addFilter('sortByDate', (items) => {
+    return items.sort((a, b) => {
+        return DateTime.fromISO(b.data.published) - DateTime.fromISO(a.data.published);
+    });
   });
 
   eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));

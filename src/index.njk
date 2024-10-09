@@ -40,10 +40,15 @@ path: home
     <div class="work-para">
         <h3>What have I been up to? </h3>
 
-        {% for work in collections.work | reverse %}
+        {% for work in collections.work | sort(attribute='data.published') | reverse %}
         <div class="work-para-one">
             <h4>{{ work.data.title }} - {{ work.data.company }}</h4>
-            <p class="date">{{ work.data.published | readableDate }} - {{ work.data.updated | readableDate }}</p>
+            <p class="date">{{ work.data.published | readableDate }}
+                {% if work.data.updated %}
+                    - {{ work.data.updated | readableDate }}</p>
+                {% else %}
+                    - Present
+                {% endif%}
             <p>
                 {% excerpt work %}
             </p>

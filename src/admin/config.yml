@@ -19,16 +19,16 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Company", name: "company", widget: "string" }
-      - { label: "Language", name: "language", widget: "string" }
-      - { label: "Icon", name: "icon", widget: "string" }
-      - { label: "Link Icon", name: "link_icon", widget: "string" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Display Link", name: "display_link", widget: "string" }
-      - { label: "Published", name: "published", widget: "datetime" }
-      - { label: "Updated", name: "updated", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string", required: false}
+      - { label: "Company", name: "company", widget: "string", required: false}
+      - { label: "Language", name: "language", widget: "string", required: false}
+      - { label: "Icon", name: "icon", widget: "string",required: false }
+      - { label: "Link Icon", name: "link_icon", widget: "string",required: false }
+      - { label: "Link", name: "link", widget: "string",required: false }
+      - { label: "Display Link", name: "display_link", widget: "string",required: false }
+      - { label: "Published", name: "published", widget: "datetime",required: false }
+      - { label: "Updated", name: "updated", widget: "datetime",required: false }
+      - { label: "Body", name: "body", widget: "markdown",required: false }
       - widget: select
         label: "tags"
         name: "tags"
