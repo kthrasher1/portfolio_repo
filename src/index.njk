@@ -18,7 +18,7 @@ path: home
         {% if introduction.paragraphs %}
             {% for paragraph in introduction.paragraphs %}
                 <p class="paragraph-{{ paragraph.display_order }}">
-                    {{ paragraph.text }}
+                    {{ paragraph.text | markdown | safe}}
                 </p>
             {% endfor %}
         {% endif %}

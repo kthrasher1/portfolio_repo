@@ -1,8 +1,8 @@
 ---
 paragraphs:
-  - text: Ay Up! I'm Kurtis, a passionate web developer and a Computer Science graduate from the University of Hull.
+  - text: "Ay Up! I'm Kurtis, a passionate web developer and a Computer Science graduate from the University of Hull."
     display_order: one
-  - text: Currently based in Hull, you can often find me at the local Makerspace, where I explore my interests and work on various projects. I develop innovative websites and cutting-edge web applications, and I'm also a huge keyboard enthusiast, always tinkering with new designs and setups.
+  - text: "Currently based in Hull, you can often find me at the local Makerspace, where I explore my interests and work on various projects. I develop innovative websites and cutting-edge web applications, and I'm also a huge keyboard enthusiast, always tinkering with new <a href='https://www.printables.com/model/1033923-sofle-v2-wireless-gasket-mounted-case' target='_blank'>designs</a> and setups."
     display_order: two
-  - text: During my time at university, I interned at Strawberry, a Shopify Plus agency, where I had the opportunity to work with prestigious clients such as BarryM Cosmetics, Lil Packaging, and Rio Health. Since then, I've gained diverse experience as a Full Stack Web Developer, working on projects in the aviation sector and contributing to the development of in-house CRMs. My current role as a Technical Consultant has further refined my skills, allowing me to engage with clients and deliver tailored software solutions.
+  - text: "During my time at university, I interned at Strawberry, a Shopify Plus agency, where I had the opportunity to work with prestigious clients such as BarryM Cosmetics, Lil Packaging, and Rio Health. Since then, I've gained diverse experience as a Full Stack Web Developer, working on projects in the aviation sector and contributing to the development of in-house CRMs. My current role as a Technical Consultant has further refined my skills, allowing me to engage with clients and deliver tailored software solutions."
     display_order: three

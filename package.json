@@ -24,6 +24,8 @@
   "main": ".eleventy.js",
   "dependencies": {
     "eleventy-plugin-excerpt": "^1.1.2",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
     "sass": "^1.32.6",
     "striptags": "^3.1.1"
   },
